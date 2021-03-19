@@ -1,0 +1,21 @@
+import pandas as pd
+import numpy as nm
+import math
+import requests
+import xlsxwriter
+
+stocks = pd.read_csv('sp_500_stocks.csv')
+IEX_CLOUD_API_TOKEN = 'Tpk_059b97af715d417d9f49f50b51b1c448'
+
+symbol = 'AAPL'
+api_url = f'https://sandbox.iexapis.com/stable/stock/{symbol}/quote/?token={IEX_CLOUD_API_TOKEN}'
+#print (api_url)
+data = requests.get(api_url).json()
+print(data)
+
+price = data['latestPrice']
+marketcap = data['marketCap']
+
+my_columns = ['Ticker', 'Stock Price']
+
+#work in progress

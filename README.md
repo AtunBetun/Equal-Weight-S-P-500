@@ -4,3 +4,5 @@ Create a Python script that will accept the value of your portfolio and tell you
 This is a project following freeCodeCamp's course on Algorithmic Trading.
 
 Jupyter notebook is having issues, so I used my own code
+
+Still a work in progress
